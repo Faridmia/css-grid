@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(12 1fr);
+            grid-template-rows: 40px 100px 40px;
+        }
+
+        .header {
+            grid-column: span 12;
+            background-color: black;
+            color: #fff;
+        }
+        .menu {
+            grid-column: span 4;
+            background-color: aqua;
+            color: #000;
+        }
+        .content {
+            grid-column: span 8;
+            background-color: bisque;
+            color: #000;
+        }
+        .footer {
+            grid-column: span 12;
+            background-color: green;
+            color: #fff;
+        }
+
+        @media only screen and (max-width:1024px) {
+            .header {
+                grid-column: span 6;
+               
+            }
+            .menu {
+                grid-column: span 6;
+            }
+            .content {
+                grid-column: span 12;
+                background-color: bisque;
+                color: #000;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>css grid</h1>
+    <div class="wrapper">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="content">
+            Content
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+    </div>
+</body>
+</html>
